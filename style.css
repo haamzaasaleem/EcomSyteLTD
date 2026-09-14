@@ -123,8 +123,9 @@ body.is-loading{overflow:hidden;height:100vh}
 .site-header.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);
   box-shadow:0 1px 0 var(--line);padding:.3rem 0}
 .header__inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.brand__logo{height:46px;transition:height .3s}
-.site-header.scrolled .brand__logo{height:40px}
+.brand{display:inline-flex;align-items:center}
+.brand__logo{height:60px;transition:height .3s;display:block}
+.site-header.scrolled .brand__logo{height:50px}
 
 .nav{display:flex;align-items:center;gap:1.6rem}
 .nav>a,.nav__dropbtn{
