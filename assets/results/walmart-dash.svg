@@ -1,0 +1,24 @@
+<svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg">
+<rect width="600" height="380" fill="#f3f5f9"/>
+<rect width="600" height="54" fill="#131A46"/>
+<circle cx="30" cy="27" r="9" fill="#0071DC"/>
+<rect x="48" y="21" width="120" height="12" rx="6" fill="rgba(255,255,255,.85)"/>
+<rect x="500" y="19" width="70" height="16" rx="8" fill="rgba(255,255,255,.2)"/>
+<rect x="24" y="78" width="150" height="10" rx="5" fill="#c7ccd8"/>
+<rect x="24" y="98" width="90" height="22" rx="5" fill="#131A46"/>
+<!-- bars -->
+<g fill="#EC8B5E">
+<rect x="70"  y="250" width="34" height="70"/>
+<rect x="130" y="220" width="34" height="100"/>
+<rect x="190" y="235" width="34" height="85"/>
+<rect x="250" y="180" width="34" height="140"/>
+<rect x="310" y="150" width="34" height="170"/>
+<rect x="370" y="120" width="34" height="200"/>
+<rect x="430" y="90"  width="34" height="230"/>
+<rect x="490" y="70"  width="34" height="250"/>
+</g>
+<polyline points="87,240 147,210 207,225 267,170 327,140 387,110 447,80 507,60" fill="none" stroke="#131A46" stroke-width="3"/>
+<rect x="24" y="150" width="70" height="26" rx="5" fill="#e4e7ee"/>
+<rect x="360" y="340" width="0" height="0"/>
+<text x="300" y="360" text-anchor="middle" font-family="Arial" font-size="13" fill="#9aa1b3">Sample report — replace with client screenshot</text>
+</svg>
