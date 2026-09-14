@@ -479,10 +479,13 @@ body.inner .site-header{background:rgba(255,255,255,.96);backdrop-filter:blur(10
   padding:8.5rem 0 3.5rem;
 }
 /* Option C: photographic hero background, tinted for readability.
-   Swap assets/hero/bg.svg for a real .jpg later (keep the same path or update the url). */
+   Each page sets --hero-img inline; falls back to a default if not set.
+   These are Pexels CDN photos; swap for your own licensed images anytime. */
 .page-hero::before{
   content:"";position:absolute;inset:0;z-index:0;
-  background:url("assets/hero/bg.svg") center/cover no-repeat;
+  background-image:var(--hero-img, url("https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=1600"));
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+  background-color:var(--navy);
   opacity:.9;
 }
 .page-hero::after{
@@ -641,6 +644,27 @@ body.inner .site-header{background:rgba(255,255,255,.96);backdrop-filter:blur(10
 .nl-form .btn{white-space:nowrap}
 .nl-note{font-size:.78rem;color:var(--muted);margin-top:.9rem;margin-bottom:0}
 @media(max-width:480px){.nl-form{flex-direction:column}.nl-modal h3{font-size:1.3rem}}
+
+/* ============================================================
+   FLOATING ACTION BUTTONS (WhatsApp + back-to-top)
+   ============================================================ */
+.fab{
+  position:fixed;right:20px;z-index:950;width:54px;height:54px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;
+  box-shadow:0 12px 28px -8px rgba(0,0,0,.45);transition:transform .3s var(--ease),opacity .3s,background .3s;
+}
+.fab--wa{bottom:20px;background:#25D366;color:#fff}
+.fab--wa:hover{transform:scale(1.08) translateY(-2px);background:#1ebe5a}
+.fab--wa::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 0 rgba(37,211,102,.5);animation:waPulse 2.4s ease-out infinite}
+@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.45)}70%{box-shadow:0 0 0 14px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.fab--top{bottom:84px;background:var(--navy);color:#fff;opacity:0;visibility:hidden;pointer-events:none}
+.fab--top.show{opacity:1;visibility:visible;pointer-events:auto}
+.fab--top:hover{transform:translateY(-3px);background:var(--navy-2)}
+@media(max-width:600px){.fab{width:50px;height:50px;right:16px}.fab--wa{bottom:16px}.fab--top{bottom:78px}}
+
+/* footer address blocks */
+.footer__addr{font-size:.86rem;color:rgba(255,255,255,.62);margin-bottom:.7rem;line-height:1.5}
+.footer__addr strong{color:#fff;font-family:'Sora',sans-serif;font-size:.82rem}
 
 /* ============================================================
    REDUCED MOTION
