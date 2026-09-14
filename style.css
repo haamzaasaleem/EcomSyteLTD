@@ -654,9 +654,10 @@ body.inner .site-header{background:rgba(255,255,255,.96);backdrop-filter:blur(10
   display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;
   box-shadow:0 12px 28px -8px rgba(0,0,0,.45);transition:transform .3s var(--ease),opacity .3s,background .3s;
 }
-.fab--wa{bottom:20px;background:#25D366;color:#fff}
-.fab--wa:hover{transform:scale(1.08) translateY(-2px);background:#1ebe5a}
-.fab--wa::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 0 rgba(37,211,102,.5);animation:waPulse 2.4s ease-out infinite}
+.fab--wa{bottom:20px;background:transparent;box-shadow:none;padding:0;overflow:visible;filter:drop-shadow(0 10px 22px rgba(18,140,70,.4))}
+.fab--wa img{width:100%;height:100%;object-fit:contain;display:block}
+.fab--wa:hover{transform:scale(1.08) translateY(-2px)}
+.fab--wa::after{content:"";position:absolute;inset:6px;border-radius:50%;box-shadow:0 0 0 0 rgba(37,211,102,.5);animation:waPulse 2.4s ease-out infinite}
 @keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.45)}70%{box-shadow:0 0 0 14px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 .fab--top{bottom:84px;background:var(--navy);color:#fff;opacity:0;visibility:hidden;pointer-events:none}
 .fab--top.show{opacity:1;visibility:visible;pointer-events:auto}
